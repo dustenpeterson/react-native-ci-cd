@@ -12,3 +12,11 @@ import renderer from 'react-test-renderer';
 it('renders correctly', () => {
   renderer.create(<App />);
 });
+
+it('App has children', () => {
+  const root = renderer.create(<App />);
+
+  const tree = root.toTree();
+
+  expect(tree.children > 0);
+})
