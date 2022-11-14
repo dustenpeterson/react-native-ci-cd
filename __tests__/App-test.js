@@ -19,4 +19,4 @@ it('App has children', () => {
   const tree = root.toTree();
 
   expect(tree.children > 0);
-})
+});
