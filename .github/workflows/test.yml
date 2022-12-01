@@ -44,6 +44,6 @@ jobs:
     needs: install-and-test
     uses: ./.github/workflows/android-build.yml
     with:
-      environment: debug
+      environment: release
     # secrets: inherit
 
