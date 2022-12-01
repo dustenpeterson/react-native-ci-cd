@@ -6,7 +6,7 @@ on:
       - "dev"
 
 jobs:
-  #First job
+  # First Job
   install-and-test:
     runs-on: ubuntu-latest
 
@@ -38,4 +38,12 @@ jobs:
       - uses: marocchino/sticky-pull-request-comment@v2
         with:
           message: ${{ steps.coverage.outputs.report }}
+    
+  # Second Job
+  build-android:
+    needs: install-and-test
+    uses: ./.github/workflows/android-build.yml
+    with:
+      environment: debug
+    # secrets: inherit
 
