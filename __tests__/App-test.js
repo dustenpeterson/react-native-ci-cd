@@ -10,6 +10,7 @@ import App from '../App';
 import renderer from 'react-test-renderer';
 
 it('renders correctly', () => {
+  // Adding comment
   renderer.create(<App />);
 });
 
